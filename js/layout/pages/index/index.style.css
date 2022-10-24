@@ -1,0 +1,305 @@
+/* Put here any 'index.html' specific css */
+
+.page-section {
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0;
+}
+
+.index-vertical-section {
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    min-width: 20%;
+    padding: 0;
+    border-left: .5px solid var(--gray-60);
+    border-right: .5px solid var(--gray-60);
+}
+.index-vertical-section:first-child {
+    border-left: none;
+}
+.index-vertical-section:last-child {
+    border-right: none;
+}
+
+.section1 {
+    min-width: 24%;
+}
+.section2, .section3, .section4, .section5 {
+    min-width: 19%;
+}
+
+.sub-section {
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.26%;
+    min-width: 100%;
+    padding: 0;
+    border: solid 1px var(--gray-70);
+    font-family: 'Roboto-Bold';
+    color: var(--gray-10);
+    font-size: 20px;
+}
+
+.section-legend {
+    font-size: 16px;
+    color: var(--gray-30);
+}
+
+.section-legend > img {
+    height: 75%;
+    filter : invert(70%)
+}
+
+.sub-section > img {
+    height: 25px;
+}
+
+.bottom-border {
+    border-bottom: 2px solid var(--gray-40);
+}
+
+.clickable {
+    background-color: var(--gray-90);
+    color: var(--gray-90);
+}
+
+/* POP IN ------------------------------------------------------------------ */
+
+.pop-in-background {
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: var(--horizontal-padding);
+    top: var(--header-height);
+    left: 0;
+    min-height: calc(100% - calc(var(--header-height) + var(--footer-height)));
+    min-width: 100%;
+    background-color: #000000b4;
+}
+
+.pop-in {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    min-width: 80%;
+    padding: 25px 35px;
+    margin: 0;
+    background-color: var(--html-background-color);
+    color: var(--gray-30);
+    border-radius: 20px;
+}
+
+.pop-in > span:first-child {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.pop-in > span:first-child > img {
+    height: 35px;
+}
+
+.score-display {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    background-color: var(--gray-90);
+    min-width: 100%;
+    min-height: fit-content;
+    padding: 5px 10px 5px 10px;
+    color: var(--gray-20);
+    font-size: 28px;
+}
+
+.select-score-button-list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+}
+
+.select-score-button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    min-width: 100%;
+    margin-bottom: 20px;
+    background-color: var(--gray-90);
+    border: 2px solid var(--gray-60);
+    border-radius: 10px;
+    color: var(--gray-20);
+    padding: 10px 0;
+    font-size: 20px;
+    font-family: Roboto-Medium;
+}
+.select-score-button:last-child {
+    margin-bottom: 0;
+}
+.select-score-button:hover, .select-score-button:focus {
+    background-color: var(--gray-60);
+}
+
+.good-score-button {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+.good-score-button:hover, .good-score-button:focus {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.bad-score-button {
+    border: 2px solid var(--lazr-red);
+}
+.bad-score-button:hover, .bad-score-button:focus {
+    background-color: var(--lazr-red);
+}
+.bad-score-button > img {
+    height: 25px;
+}
+
+.num-pad {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    min-width: fit-content;
+    padding: 0;
+    margin: 20px 0 20px 0;
+}
+
+.num-row {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    min-width: fit-content;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.num-pad > .num-row:last-child {
+    margin-bottom: 0;
+}
+
+.num-span {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    min-width: 70px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid var(--gray-30);
+    color: var(--gray-30);
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 28px;
+    font-family: 'Roboto-Black';
+}
+
+.num-row > .num-span:last-child {
+    margin-right: 0;
+}
+
+.num-row:last-child > .num-span:first-child, .num-row:last-child > .num-span:last-child {
+    color: var(--lazr-red);
+    border: 2px solid var(--lazr-red);
+}
+
+.animate {
+    animation: number-pulse .4s linear;
+}
+
+@keyframes number-pulse {
+    from {
+        border: 2px solid var(--gray-30);
+        color: var(--gray-30);
+        background-color: var(--gray-80);
+    }
+    25% {
+        border: 2px solid white;
+        color: white;
+        background-color: var(--gray-70);
+    }
+    to {
+        border: 2px solid var(--gray-30);
+        color: var(--gray-30);
+        background-color: var(--gray-80);
+    }
+}
+
+.pop-in-bottom-buttons-area {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.pop-in-bottom-buttons-area > button {
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+.pop-in-cancel-button {
+    background-color: var(--gray-80);
+    border: 1px solid var(--gray-50);
+    color: var(--gray-20);
+}
+.pop-in-cancel-button:hover, .pop-in-cancel-button:focus {
+    background-color: var(--lazr-red);
+    border: 1px solid var(--lazr-red);
+    color: #ffffff;
+}
+.pop-in-validate-button {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--on-primary);
+    margin-left: 10%;
+}
+.pop-in-validate-button:hover, .pop-in-validate-button:focus {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: #ffffff;
+}
