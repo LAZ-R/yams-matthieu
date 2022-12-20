@@ -1,5 +1,5 @@
 const STORAGE = localStorage;
-const appShortName = 'yams';
+const appShortName = 'yams0.0.5';
 
 if (STORAGE.getItem(`${appShortName}FirstTime`) === null) {
     STORAGE.setItem(`${appShortName}FirstTime`, '0');
@@ -7,18 +7,18 @@ if (STORAGE.getItem(`${appShortName}FirstTime`) === null) {
         settings: [
             {
                 id: 1,
-                name: '',
+                name: 'Écran',
                 settings: [
                     {
                         id: 'keepScreenAwake',
-                        name: `Laisser l'écran allumé lorsque l'appli est lancée`,
+                        name: `Laisser l'écran allumé lorsque l'application est lancée`,
                         isActive: true
                     }
                 ]
             },
             {
                 id: 2,
-                name: 'Advancé',
+                name: 'Avancé',
                 settings: [
                     {
                         id: 'jsonWizard',
@@ -27,7 +27,8 @@ if (STORAGE.getItem(`${appShortName}FirstTime`) === null) {
                     }
                 ]
             }
-        ]
+        ],
+        themeColor: '#749f69'
     };
     STORAGE.setItem(`${appShortName}User`, JSON.stringify(userTMP));
 }

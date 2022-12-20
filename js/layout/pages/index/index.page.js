@@ -197,7 +197,7 @@ const validateTileScore = (tileId) => {
     } else if (isChanceTile(tileId)
         && tileId.charAt(2) == '1'
         && score > 29) {
-            window.alert('Impossible de mettre une valeur supérieure à 29');
+            window.alert('Impossible de mettre une valeur supérieure à 29');/* 
     } else if (isChanceTile(tileId)
         && tileId.charAt(2) == '0'
         && parseInt(document.getElementById(`${tileId.charAt(0)}11`).innerHTML) != 0
@@ -207,7 +207,7 @@ const validateTileScore = (tileId) => {
         && tileId.charAt(2) == '1'
         && parseInt(document.getElementById(`${tileId.charAt(0)}10`).innerHTML) != 0
         && score > parseInt(document.getElementById(`${tileId.charAt(0)}10`).innerHTML)) {
-        window.alert('Impossible de mettre un score supérieure à la case "+" de la même colonne');
+        window.alert('Impossible de mettre un score supérieure à la case "+" de la même colonne'); */
     } else {
         if (score == 0) {
             xCount += 1;
@@ -218,7 +218,7 @@ const validateTileScore = (tileId) => {
         tileElement.innerHTML = score == 0 ? `<img src="./medias/images/font-awsome/xmark-solid.svg" style="filter: ${crossFilter};">` : score;
         tileElement.style.backgroundColor = 'var(--gray-80)';
         tileElement.style.color = 'var(--gray-10)';
-        tileElement.classList.remove('clickable');
+        //tileElement.classList.remove('clickable');
         refreshTotal();
         disappearPopIn();
         setTimeout(() => {

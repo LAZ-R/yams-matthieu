@@ -36,3 +36,17 @@
 .setting-tile:last-child {
     border-bottom: none;
 }
+
+.theme-color-area {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.color-round {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    margin: 10px 10px;
+}

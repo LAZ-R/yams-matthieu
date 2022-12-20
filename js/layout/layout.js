@@ -17,6 +17,12 @@ HEADER.renderView();
 if (LAZR.BREAKPOINTS.isLaptopOrUp) {
     FOOTER.renderView();
 }
+
+const applyThemeColor = () => {
+    const user = LAZR.STORAGE.getUser();
+    const color = user.themeColor;
+    document.documentElement.style.setProperty('--primary', `${color}`);
+};
 switch (page) {
     case 'about':
         MAIN.appendChild(PAGE_ABOUT.renderPage());
@@ -32,3 +38,4 @@ switch (page) {
         break;
 }
 LAZR.DOM.setViewportSize();
+applyThemeColor();
