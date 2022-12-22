@@ -1,5 +1,5 @@
 const STORAGE = localStorage;
-const appShortName = 'yams0.0.5';
+const appShortName = 'yams0.0.6';
 
 if (STORAGE.getItem(`${appShortName}FirstTime`) === null) {
     STORAGE.setItem(`${appShortName}FirstTime`, '0');
