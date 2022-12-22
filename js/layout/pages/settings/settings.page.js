@@ -2,14 +2,24 @@ import * as LAZR from '../../../lazR/lazR.js';
 
 const colors = [
     '#749f69',
-    '#a441bd',
     '#428a6f',
+    "#477bb3",
     '#1d55b5',
+    
+    "#b06fbd",
+    '#a441bd',
+    "#b02584",
+    "#5b3a91",
+
+    "#a66d42",
     '#d16615',
     '#c43b3b',
     '#9e8403',
-    "#5b3a91",
-    "#358c15"
+
+    "#358c15",
+    "#3c6338",
+    "#5c513f",
+    "#636f78",
 ]
 
 let user = LAZR.STORAGE.getUser();
@@ -70,7 +80,7 @@ export const renderPage = () => {
         page.appendChild(LAZR.DOM.getElementFromHTMLString(renderSettingsGroup(settingsGroup)));
     });
 
-    page.appendChild(LAZR.DOM.createElement('h3', 'themeTitle', '', 'Thème'))
+    page.appendChild(LAZR.DOM.createElement('h3', 'themeTitle', 'theme-title', 'Thème'))
 
     const themeColorArea = LAZR.DOM.createElement('div', 'themeColorArea', 'theme-color-area', '');
     colors.forEach(color => {

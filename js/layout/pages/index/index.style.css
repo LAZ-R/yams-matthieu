@@ -277,9 +277,16 @@
 
 .pop-in-bottom-buttons-area > button {
     justify-content: center;
+    min-width: 30%;
     width: 100%;
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
+}
+.pop-in-bottom-buttons-area > button:first-of-type {
+    margin-right: 5%;
+}
+.pop-in-bottom-buttons-area > button:last-of-type {
+    margin-left: 5%;
 }
 
 .pop-in-cancel-button {
@@ -292,11 +299,22 @@
     border: 1px solid var(--lazr-red);
     color: #ffffff;
 }
+
+.pop-in-reset-button {
+    background-color: var(--gray-80);
+    border: 1px solid var(--gray-50);
+    color: var(--gray-20);
+}
+.pop-in-reset-button:hover, .pop-in-reset-button:focus {
+    background-color: var(--lazr-red);
+    border: 1px solid var(--lazr-red);
+    color: #ffffff;
+}
+
 .pop-in-validate-button {
     border: 1px solid var(--primary);
     background-color: var(--primary);
     color: var(--on-primary);
-    margin-left: 10%;
 }
 .pop-in-validate-button:hover, .pop-in-validate-button:focus {
     background-color: var(--primary);

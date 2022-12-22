@@ -38,6 +38,19 @@ const handleTileClick = (tileId) => {
 }
 window.handleTileClick = handleTileClick;
 
+const resetTile = (tileId) => {
+    const tileElement = document.getElementById(tileId);
+    tileElement.innerHTML = '0';
+    tileElement.style.backgroundColor = 'var(--gray-90)';
+    tileElement.style.color = 'var(--gray-90)';
+    tileElement.classList.remove('filled');
+    completedTilesCount -= 1;
+    console.log(`tuiles complétées : ${completedTilesCount}`);
+    disappearPopIn();
+    refreshTotal();
+}
+window.resetTile = resetTile;
+
 const appearPopIn = (tileElement) => {
     const tileId = tileElement.id;
     const previousValue = parseInt(tileElement.innerHTML);
@@ -145,6 +158,7 @@ const appearPopIn = (tileElement) => {
     <div class="pop-in-bottom-buttons-area">
         <button class="pop-in-cancel-button" onclick="disappearPopIn()">Annuler</button>
         ${isChanceTile(tileId) ? `<button class="pop-in-validate-button" onclick="validateTileScore('${tileId}')">Valider</button>` : ``}
+        ${tileElement.classList.contains('filled') ? `<button class="pop-in-reset-button" onclick="resetTile('${tileId}')")>Reset</button>` : ''}
     </div>`;
 
     popIn.innerHTML = popInInnerHTML;
@@ -187,6 +201,8 @@ const handleScoreButtonClick = (number, tileId) => {
 }
 window.handleScoreButtonClick = handleScoreButtonClick;
 
+
+
 const validateTileScore = (tileId) => {
     const scoreDisplay = document.getElementById('scoreDisplay');
     let score = scoreDisplay.innerHTML;
@@ -222,7 +238,11 @@ const validateTileScore = (tileId) => {
         refreshTotal();
         disappearPopIn();
         setTimeout(() => {
-            completedTilesCount += 1;
+            if (!tileElement.classList.contains('filled')) {
+                completedTilesCount += 1;
+                tileElement.classList.add('filled');
+                //console.log(`tuiles complétées : ${completedTilesCount}`);
+            }
             if (completedTilesCount == 48) {
                 if (window.confirm(`
                 Partie terminée
